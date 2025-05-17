@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Plan Upgrade</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+    #curr {
+      padding: 12px 16px;
+      cursor: no-drop;
+    }
+    span {
+      font-size: 14px;
+    }
+
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[#212121]">
+  <main class="w-[100vw] h-[100vh] py-8">
+    <div class="text-center mb-6">
+      <h1 class="text-3xl md:text-4xl text-white font-medium">Upgrade your plan</h1>
+    </div>
+
+    <div class="flex flex-col items-center">
+      <div class="flex bg-[#424242] rounded-full p-1 mb-6">
+        <button class="px-6 py-2 rounded-full text-white bg-[#212121]" id="btn1">Personal</button>
+        <button class="px-6 py-2 rounded-full text-gray-300" id="btn2">Business</button>
+      </div>
+
+      <section class="flex flex-col lg:flex-row gap-6 w-[90vw] max-w-7xl">
+        <div id="free" class="flex-1 border-2 border-white rounded-[10px] p-6">
+          <h1 class="text-white text-2xl">Free</h1>
+          <div class="ms-4 mt-2 flex items-baseline gap-1.5">
+            <div class="relative">
+              <p class="absolute -start-4 -top-0 text-2xl text-white">$</p>
+              <div class="flex items-baseline gap-1.5">
+                <div class="text-white text-5xl">0</div>
+                <div class="mt-auto mb-0 flex flex-col items-start text-[#AFAFAF]">
+                  <p class="text-xs">USD/<br>month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-5 text-white">Explore how AI can help you with everyday tasks</p>
+          <button id="curr" class="w-full rounded-full bg-[#AFAFAF] mt-6 text-white">Your current plan</button>
+
+          <div class="mt-8 space-y-3">
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Access to basic AI question-answering</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Limited daily questions</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">General knowledge and trivia support</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Standard response speed</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Basic conversation capabilities</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Limited memory (no long conversation history)</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="plus" class="flex-1 border-2 border-green-600 rounded-[10px] p-6">
+          <h1 class="text-white text-2xl">
+            Plus <span class="ms-1 rounded border px-2 py-1 text-xs font-semibold border-green-600 text-green-600">POPULAR</span>
+          </h1>
+          <div class="ms-4 mt-2 flex items-baseline gap-1.5">
+            <div class="relative">
+              <p class="absolute -start-4 -top-0 text-2xl text-white">$</p>
+              <div class="flex items-baseline gap-1.5">
+                <div class="text-white text-5xl">20</div>
+                <div class="mt-auto mb-0 flex flex-col items-start text-[#AFAFAF]">
+                  <p class="text-xs">USD/<br>month</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p class="mt-5 text-white">Everything in Free, plus:</p>
+          <button class="w-full rounded-full bg-green-600 mt-6 text-white py-2">Upgrade to Plus</button>
+
+          <div class="mt-8 space-y-3">
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Priority response speed</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Up to 10,000 questions per month</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Advanced data analysis</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Access to specialized knowledge (tech, health, travel, etc.)</span>
+            </div>
+            <div class="flex items-start">
+              <i class="fa-solid fa-check text-white mt-1"></i>
+              <span class="ms-4 text-white">Save conversation history</span>
+            </div>
+            <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Customize your assistant’s name and style</span>
+            </div>
+            <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Early access to new features</span>
+            </div>
+            <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Email and basic chatbot support</span>
+            </div>
+          </div>
+        </div>
+        <div id="team" class="flex-1 border-2 border-white rounded-[10px] p-6 hidden">
+            <h1 class="text-white text-2xl">
+              Team
+            </h1>
+            <div class="ms-4 mt-2 flex items-baseline gap-1.5">
+              <div class="relative">
+                <p class="absolute -start-4 -top-0 text-2xl text-white">$</p>
+                <div class="flex items-baseline gap-1.5">
+                  <div class="text-white text-5xl">220</div>
+                  <div class="mt-auto mb-0 flex flex-col items-start text-[#AFAFAF]">
+                    <p class="text-xs">USD/<br>month</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <button class="w-full rounded-full bg-[#FFFFFF]  mt-6 text-black py-2">Upgrade to Team</button>
+  
+            <div class="mt-8 space-y-3">
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Multi-user access with role-based permissions</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Scheduled AI-generated reminders & follow-ups</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Custom knowledge base (upload PDFs/FAQs)</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Email automation (Gmail, Outlook)</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Team performance analytics dashboard</span>
+              </div>
+              <div class="flex items-start">
+                  <i class="fa-solid fa-check text-white mt-1"></i>
+                  <span class="ms-4 text-white">Customer query trend reports</span>
+              </div>
+              <div class="flex items-start">
+                  <i class="fa-solid fa-check text-white mt-1"></i>
+                  <span class="ms-4 text-white">Billing & usage tracking per user</span>
+              </div>
+              <div class="flex items-start">
+                  <i class="fa-solid fa-check text-white mt-1"></i>
+                  <span class="ms-4 text-white">Single Sign-On (SSO) for enterprises</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Custom AI training on company data</span>
+            </div>
+            <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">HR/legal compliance response filters</span>
+            </div>
+            </div>
+          </div>
+        <div id="pro" class="flex-1 border-2 border-white rounded-[10px] p-6">
+            <h1 class="text-white text-2xl">
+             Pro
+            </h1>
+            <div class="ms-4 mt-2 flex items-baseline gap-1.5">
+              <div class="relative">
+                <p class="absolute -start-4 -top-0 text-2xl text-white">$</p>
+                <div class="flex items-baseline gap-1.5">
+                  <div class="text-white text-5xl">200</div>
+                  <div class="mt-auto mb-0 flex flex-col items-start text-[#AFAFAF]">
+                    <p class="text-xs">USD/<br>month</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <p class="mt-5 text-white">Everything in Plus, Pro:</p>
+            <button class="w-full rounded-full bg-[#FFFFFF] mt-6 text-black py-2">Upgrade to Pro</button>
+  
+            <div class="mt-8 space-y-3">
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Unlimited questions</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Faster-than-instant response speed</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Expert-level domain knowledge (medical, legal, business consulting, etc.)</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Upload files (PDFs, Docs) and ask questions about them</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Personalized virtual assistant with custom behavior</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Full conversation memory and deep context understanding</span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">Voice assistant feature (talk instead of typing) </span>
+              </div>
+              <div class="flex items-start">
+                <i class="fa-solid fa-check text-white mt-1"></i>
+                <span class="ms-4 text-white">24/7 priority support</span>
+              </div>
+            </div>
+      </section>
+    </div>
+  </main>
+  <script src="../project/premium.js"></script>
+</body>
+</html>
