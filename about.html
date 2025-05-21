@@ -1,60 +1,157 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../project/about.css">
-  <link rel="stylesheet" href="../project/aboutmedia.css">
+  <title>Nexa Assistant</title>
+  <link rel="stylesheet" href="about.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    nav {
+      width: 100%;
+      height: 10vh;
+      background-color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
+
+    .logo img {
+      width: 120px;
+      height: 23px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 40px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links li a {
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+      font-weight: 500;
+    }
+
+    .nav-links li a:hover {
+      color: #FF66C4;
+    }
+
+    .menu-icon {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-icon span {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 4px;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        padding: 0 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        background-color: #111;
+        padding: 20px;
+        position: absolute;
+        top: 10vh;
+        left: 0;
+        width: 100%;
+        transform: translateX(0%);
+        display: none;
+        align-items: center;
+        z-index: 100;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-icon {
+        display: flex;
+        z-index: 101;
+      }
+
+      .menu-icon span.active:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      .menu-icon span.active:nth-child(2) {
+        opacity: 0;
+      }
+
+      .menu-icon span.active:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  </style>
 </head>
 <body>
+    
+    <nav>
+        <div class="logo">
+          <img src="nexa_ogo-1.webp" alt="NEXA Logo">
+        </div>
+    
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="premium.html">Pricing</a></li>
+          <li><a href="login.html">Register</a></li>
+          <li><a href="tools.html">Tools</a></li>
+        </ul>
+    
+        <div class="menu-icon" id="menu-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    
+      
   <!-- Hero Section -->
-  <div class="save-time">
-    <div class="bg-1">
-        <h1 class="save-text">Nexa projects to save over <br><span style="background: linear-gradient(135deg, #FF66C4 10%, #8C52FF 80%)">2 million</span> hours every year and complete over a million tasks.</h1>
-    </div>
-</div>
-<div class="message-sec-1">
-    <div class="message-sec-1-middle">
-        <div class="message-part-1">
-            <img src="../project/message1.webp" alt="" id="i-1">
-        </div>
-        <div class="message-part-2">
-            <h1 class="delegate">Delegate tasks with lightning speed and see projects move forward twice as fast.</h1>
-
-            <h1 class="delegate-2">Stay focused on  strategic priorities knowing the details are <span style="background: linear-gradient(135deg, #FFBD59 10%, #FF66C4 80%)">expertly managed. </span></h1>
-
-            <h1 class="delegate-2">Experience stress-free efficiency and seamless productivity <span style="background: linear-gradient(135deg, #0CC0DF 10%, #8C52FF 80%)"> every day.</span></h1>
-        </div>
-    </div>
-</div>
-<div class="message-sec-1">
-    <div class="message-sec-2-middle">
-        <div class="message-part-2" id="p-2-m">
-            <h1 class="delegate">Delegating tasks is now a breeze with familiar tools like  <span style="background: linear-gradient(135deg, #FF66C4 10%, #8C52FF 80%)"> Gmail, Outlook, Slack, and WhatsApp</span> - making communication seamless and efficient.</h1>
-        </div>
-        <div class="message-part-1">
-            <img src="../project/email.webp" alt="" id="i-1">
-        </div>
-    </div>
-</div>
-
+  <section class="save-time">
+      <div class="bg-1" data-aos="fade-up">
+          <h1 class="save-text" data-aos="fade-up">
+              Nexa projects to save over <br />
+              <span style="background: linear-gradient(135deg, #FF66C4 10%, #8C52FF 80%)">2 million</span> hours every year and complete over a million tasks.
+          </h1>
+      </div>
+  </section>
 
   <!-- Message Section 1 -->
   <section class="message-section">
       <div class="message-container">
           <div class="message-image" data-aos="fade-right">
-              <img src="../project/message1.webp" alt="Delegation Visual" />
+              <img src="message1.webp" alt="Delegation Visual" />
           </div>
           <div class="message-content" data-aos="fade-left">
               <h1>Delegate tasks with lightning speed and see projects move forward twice as fast.</h1>
               <h2>
                   Stay focused on strategic priorities knowing the details are
-                  <span class="highlight">expertly managed.</span>
+                  <span style="background: linear-gradient(135deg, #FFBD59 10%, #FF66C4 80%)">expertly managed. </span>
               </h2>
               <h2>
                   Experience stress-free efficiency and seamless productivity
-                  <span class="highlight">every day.</span>
+                  <span style="background: linear-gradient(135deg, #0CC0DF 10%, #8C52FF 80%)"> every day.</span>
               </h2>
           </div>
       </div>
@@ -66,11 +163,11 @@
           <div class="message-content" data-aos="fade-right">
               <h1>
                   Delegating tasks is now a breeze with familiar tools like
-                  <span class="highlight">Gmail, Outlook, Slack, and WhatsApp</span> - making communication seamless and efficient.
+                  <span style="background: linear-gradient(135deg, #FF66C4 10%, #8C52FF 80%)"> Gmail, Outlook, Slack, and WhatsApp</span> - making communication seamless and efficient.
               </h1>
           </div>
           <div class="message-image" data-aos="fade-left">
-              <img src="../project/email.webp" alt="Communication Tools">
+              <img src="email.webp" alt="Communication Tools">
           </div>
       </div>
   </section>
@@ -78,10 +175,10 @@
   <div class="sec-3" >
       <div class="middle-sec-3" >
         <h1 class="animate-text" id="garde-font" data-aos="zoom-in">
-          You’ve got the ambition and the goals. <br>What you need is more freedom.
+          You've got the ambition and the goals. <br>What you need is more freedom.
         </h1>
         <h1 class="master-of-art" data-aos="zoom-in">
-          Master the art of delegation, and you’ll discover the time to turn your goals into achievements.
+          Master the art of delegation, and you'll discover the time to turn your goals into achievements.
         </h1>
   
         <div class="info-box" onclick="showDetails('email')" data-aos="fade-right" data-aos-offset="300"
@@ -96,7 +193,7 @@
       </svg>
           <div>
             <h2 class="title">Achieve Inbox Zen</h2>
-            <p class="desc">Master the art of delegation, and you’ll discover the time to turn your goals into achievements.</p>
+            <p class="desc">Master the art of delegation, and you'll discover the time to turn your goals into achievements.</p>
           </div>
         </div>
   
@@ -142,7 +239,7 @@
               </svg>
           <div>
             <h2 class="title">Simplify Your Personal Life</h2>
-            <p class="desc">Whether it’s ordering lunch, planning a home renovation, or anything in between, we handle the details so you can enjoy life’s moments..</p>
+            <p class="desc">Whether it's ordering lunch, planning a home renovation, or anything in between, we handle the details so you can enjoy life's moments..</p>
           </div>
         </div>
 
@@ -174,7 +271,7 @@
       </svg>
           <div>
             <h2 class="title">Efficient Admin Support</h2>
-            <p class="desc">From preparing documents and entering data to turning meeting notes into action items, bookkeeping, and organizing files, we take care of the administrative tasks so you don’t have to</p>
+            <p class="desc">From preparing documents and entering data to turning meeting notes into action items, bookkeeping, and organizing files, we take care of the administrative tasks so you don't have to</p>
           </div>
         </div>
   
@@ -195,7 +292,7 @@
 
       <div class="card-container">
           <div class="card card-top-tier" data-aos="zoom-in-right">
-              <img src="../project/iocn1.webp" alt="Top-Tier Talent Icon">
+              <img src="iocn1.webp" alt="Top-Tier Talent Icon">
               <h3>Top-Tier Talent</h3>
               <div class="card-content">
                   <p>We select only the top 1% of applicants—those who are proactive, meticulous, fluent in English, and highly experienced in their fields.</p>
@@ -204,7 +301,7 @@
           </div>
 
           <div class="card card-exclusive" data-aos="zoom-in">
-              <img src="../project/iocn2.webp" alt="Exclusive Candidate Pool Icon">
+              <img src="iocn2.webp" alt="Exclusive Candidate Pool Icon">
               <h3>Exclusive Candidate Pool</h3>
               <div class="card-content">
                   <p>Our assistants are sourced through unique channels and carefully selected, giving you access to outstanding talent you won't find on typical job boards.</p>
@@ -213,7 +310,7 @@
           </div>
 
           <div class="card card-handpicked" data-aos="zoom-in-left">
-              <img src="../project/iocn3.webp" alt="Handpicked Icon">
+              <img src="iocn3.webp" alt="Handpicked Icon">
               <h3>Handpicked for Your Needs</h3>
               <div class="card-content">
                   <p>We handpick your assistant after live interviews and thorough evaluations, ensuring a perfect match.</p>
@@ -318,7 +415,7 @@
               </ul>
           </div>
           <div class="image-container" data-aos="zoom-in-left">
-              <img loading="lazy" width="400" height="400" src="../project/NEXA-LOGO-3.webp" alt="Nexa Logo">
+              <img loading="lazy" width="400" height="400" src="NEXA-LOGO-3.webp" alt="Nexa Logo">
           </div>
       </div>
   </div>
@@ -373,7 +470,7 @@
       </section>
   </div>
 
-  <!-- CTA Section -->
+  CTA Section
   <div class="next-genration" data-aos="zoom-in">
       <h4 class="next-gen">Experience next-generation assistance today.</h4>
       <h1 class="next-gen-2">Experience Nexa</h1>
@@ -381,16 +478,13 @@
   </div>
 
   <!-- Footer -->
-  <div class="footer">
+  <!-- <div class="footer">
       <div class="footer-logo">
-          <img src="../project/nexa_ogo-1.webp" alt="Nexa Logo">
+          <img src="nexa_ogo-1.webp" alt="Nexa Logo">
+          <p style="color: #ffffff; margin-left: 15px; margin-top: 30px;" >Copyright 2025 © Nexa Assistant</p>
       </div>
-        alt="Nexa Logo">
-      </div>
-      <div class="footer-text">
-          <p>Copyright 2025 © Nexa Assistant</p>
-      </div>
-  </div>
+ 
+  </div> -->
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -495,11 +589,91 @@
       window.addEventListener('load', checkForOverflow);
       // Also check after window resize
       window.addEventListener('resize', checkForOverflow);
+      
+      // Mobile menu toggle
+      document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+        
+        menuIcon.addEventListener('click', function() {
+          navLinks.classList.toggle('active');
+          
+          // Add animation to menu icon (hamburger to X)
+          const spans = this.querySelectorAll('span');
+          spans.forEach(span => span.classList.toggle('active'));
+        });
+      });
   </script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script>
     AOS.init();
   </script>
+
+  <footer class="bg-[#212121] text-white py-12">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <!-- Company Info -->
+        <div class="space-y-4">
+          <img src="nexa_ogo-1.webp" alt="NEXA Logo" class="h-8">
+          <p class="text-gray-400 text-sm">Empowering businesses with cutting-edge AI solutions for a smarter tomorrow.</p>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+              <i class="fab fa-facebook"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Home</a></li>
+            <li><a href="about.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">About Us</a></li>
+            <li><a href="premium.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Pricing</a></li>
+            <li><a href="tools.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Tools</a></li>
+          </ul>
+        </div>
+
+        <!-- Support -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Support</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Help Center</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Documentation</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">API Reference</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Legal</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Terms of Service</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Cookie Policy</a></li>
+            <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">GDPR</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+        <p>&copy; 2024 NEXA. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="about.js"></script>
 </body>
 </html>

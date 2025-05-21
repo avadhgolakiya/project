@@ -41,7 +41,7 @@ body{
   text-align: center;
   padding: 40px;
   z-index: 1;
-  transition: .6s ease-in-out 1.2s;
+  transition: -1.4s ease-in-out 1.2s;
 }
 .conatiner.active .formbox{
   right: 50%;
@@ -226,4 +226,141 @@ form{
   .conatiner h1{
       font-size: 30px;
   }
+}
+
+/* Footer Styles */
+footer {
+    background-color: #212121;
+    color: white;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+footer .max-w-7xl {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+footer .grid {
+    display: grid;
+    gap: 2rem;
+}
+
+footer .space-y-4 > * + * {
+    margin-top: 1rem;
+}
+
+footer .space-y-2 > * + * {
+    margin-top: 0.5rem;
+}
+
+footer .text-gray-400 {
+    color: #9ca3af;
+}
+
+footer .text-gray-400:hover {
+    color: #FF66C4;
+    transition: color 0.3s ease;
+}
+
+footer .border-t {
+    border-top: 1px solid #374151;
+}
+
+footer .h-8 {
+    height: 2rem;
+}
+
+footer .text-sm {
+    font-size: 0.875rem;
+}
+
+footer .text-lg {
+    font-size: 1.125rem;
+}
+
+footer .font-semibold {
+    font-weight: 600;
+}
+
+footer .mb-4 {
+    margin-bottom: 1rem;
+}
+
+footer .mt-12 {
+    margin-top: 3rem;
+}
+
+footer .pt-8 {
+    padding-top: 2rem;
+}
+
+footer .text-center {
+    text-align: center;
+}
+
+footer .flex {
+    display: flex;
+}
+
+footer .space-x-4 > * + * {
+    margin-left: 1rem;
+}
+
+/* Responsive Footer */
+@media (min-width: 768px) {
+    footer .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    footer {
+        padding: 2rem 0;
+    }
+
+    footer .grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    footer .space-x-4 {
+        justify-content: center;
+    }
+
+    footer .text-lg {
+        font-size: 1.25rem;
+    }
+
+    footer .space-y-4 > * + * {
+        margin-top: 1.5rem;
+    }
+
+    footer .space-y-2 > * + * {
+        margin-top: 0.75rem;
+    }
+
+    footer .h-8 {
+        height: 2.5rem;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    footer {
+        padding: 1.5rem 0;
+    }
+
+    footer .text-sm {
+        font-size: 0.75rem;
+    }
+
+    footer .text-lg {
+        font-size: 1.125rem;
+    }
+
+    footer .space-x-4 > * + * {
+        margin-left: 0.75rem;
+    }
 }

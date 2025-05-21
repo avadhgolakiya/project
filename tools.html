@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexa - Tools</title>
+    <!-- Load Font Awesome first -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Then load other stylesheets -->
+    <link rel="stylesheet" href="tool.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+     <nav class="w-[100vw] h-[10vh] ps-[70px] pe-[70px] flex items-center justify-between">
+        <img src="nexa_ogo-1.webp" alt="" class="w-[120px] h-[23px]">
+        <ul class="flex justify-center content-center">
+            <li class="content-center"><a href="./about.html">About Us</a></li>
+            <li class="content-center"><a href="./premium.html">Pricing</a></li>
+            <li class="content-center"><a href="./login.html">Register</a></li>
+            <li class="content-center"><a href="./tools.html">Tools</a></li>
+        </ul>
+        <div id="menu-icon-box">
+          <svg id="menu" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+          <svg id="close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+
+         </div>
+    </nav>
+    <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon" style="display: block;"></i>
+            <i class="fa-solid fa-sun" style="display: none;"></i>
+        </button>
+    </div>
+
+    <div class="tools-hero-container">
+        <div class="data">
+          <h1 class="heading1" id="fadeHeading">AI TOOLs</h1>
+          <h2 class="heading2">AI is the Future</h2>  
+        </div>
+    </div>
+
+    <div class="tools-container">
+        <!-- Text Generation Tools -->
+        <section class="tool-section">
+            <h2 class="section-title">Text Generation</h2>
+            <div class="tools-grid">
+                <a href="tool-details.html?tool=chatgpt" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/chatgpt.png" alt="ChatGPT Logo">
+                    </div>
+                    <h3>ChatGPT</h3>
+                    <p>Advanced language model for natural conversations</p>
+                </a>
+                <a href="tool-details.html?tool=claude" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/claude.png" alt="Claude Logo">
+                    </div>
+                    <h3>Claude</h3>
+                    <p>AI assistant for writing and analysis</p>
+                </a>
+                <a href="tool-details.html?tool=googlebard" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/googlebard.png" alt="Bard Logo">
+                    </div>
+                    <h3>Google Bard</h3>
+                    <p>Google's conversational AI assistant</p>
+                </a>
+                <a href="tool-details.html?tool=jasper" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/jasper.webp" alt="Jasper Logo">
+                    </div>
+                    <h3>Jasper</h3>
+                    <p>AI writing assistant for marketing content</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Image Generation Tools -->
+        <section class="tool-section">
+            <h2 class="section-title">Image Generation</h2>
+            <div class="tools-grid">
+                <a href="tool-details.html?tool=dalle" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/chatgpt.png" alt="DALL-E Logo">
+                    </div>
+                    <h3>DALL-E</h3>
+                    <p>Create images from text descriptions</p>
+                </a>
+                <a href="tool-details.html?tool=midjourney" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/midjourney.png" alt="Midjourney Logo">
+                    </div>
+                    <h3>Midjourney</h3>
+                    <p>AI-powered image creation tool</p>
+                </a>
+                <a href="tool-details.html?tool=stablediffusion" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/stable.png" alt="Stable Diffusion Logo">
+                    </div>
+                    <h3>Stable Diffusion</h3>
+                    <p>Open-source image generation model</p>
+                </a>
+                <a href="tool-details.html?tool=canva" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/canva.webp" alt="Canva AI Logo">
+                    </div>
+                    <h3>Canva AI</h3>
+                    <p>AI-powered design and image generation</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Code Generation Tools -->
+        <section class="tool-section">
+            <h2 class="section-title">Code Generation</h2>
+            <div class="tools-grid">
+                <a href="tool-details.html?tool=githubcopilot" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/copilot.png" alt="GitHub Copilot Logo">
+                    </div>
+                    <h3>GitHub Copilot</h3>
+                    <p>AI pair programmer for code completion</p>
+                </a>
+                <a href="tool-details.html?tool=codewhisperer" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/code-whisperer-min.png" alt="CodeWhisperer Logo">
+                    </div>
+                    <h3>CodeWhisperer</h3>
+                    <p>AI code assistant by Amazon</p>
+                </a>
+                <a href="tool-details.html?tool=tabnine" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/tabine.webp" alt="Tabnine Logo">
+                    </div>
+                    <h3>Tabnine</h3>
+                    <p>AI code completion for multiple languages</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Audio & Music Tools -->
+        <section class="tool-section">
+            <h2 class="section-title">Audio & Music</h2>
+            <div class="tools-grid">
+                <a href="tool-details.html?tool=mubert" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/mubert-logo.png" alt="Mubert Logo">
+                    </div>
+                    <h3>Mubert</h3>
+                    <p>AI music generation platform</p>
+                </a>
+                <a href="tool-details.html?tool=descript" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/descript-logo.webp" alt="Descript Logo">
+                    </div>
+                    <h3>Descript</h3>
+                    <p>AI audio editing and voice cloning</p>
+                </a>
+                <a href="tool-details.html?tool=elevenlabs" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/eleven-labs-ai-logo.png" alt="ElevenLabs Logo">
+                    </div>
+                    <h3>ElevenLabs</h3>
+                    <p>AI voice generation and cloning</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Video Generation Tools -->
+        <section class="tool-section">
+            <h2 class="section-title">Video Generation</h2>
+            <div class="tools-grid">
+                <a href="tool-details.html?tool=runway" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/runway.png" alt="Runway Logo">
+                    </div>
+                    <h3>Runway</h3>
+                    <p>AI video editing and generation</p>
+                </a>
+                <a href="tool-details.html?tool=synthesia" class="tool-card">
+                    <div class="tool-image">
+                        <img src="images/syntesi.webp" alt="Synthesia Logo">
+                    </div>
+                    <h3>Synthesia</h3>
+                    <p>AI video generation with avatars</p>
+                </a>
+                <a href="tool-details.html?tool=heygen" class="tool-card">
+                    <div class="tool-image">
+                        <img src="./images/hygen.avif" alt="HeyGen Logo">
+                    </div>
+                    <h3>HeyGen</h3>
+                    <p>AI video creation with digital avatars</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="bg-[#212121] text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <img src="nexa_ogo-1.webp" alt="NEXA Logo" class="h-8">
+                    <p class="text-gray-400 text-sm">Empowering businesses with cutting-edge AI solutions for a smarter tomorrow.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">About Us</a></li>
+                        <li><a href="premium.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Pricing</a></li>
+                        <li><a href="tools.html" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Tools</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Help Center</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">API Reference</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">Cookie Policy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-[#FF66C4] transition-colors">GDPR</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 NEXA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="tool.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
